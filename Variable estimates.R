@@ -53,6 +53,3 @@ input_variable_estimates <- data.frame(variable = c("Paddy yield",
 input_variable_estimates
 
 
-
-write.csv(input_variable_estimates, "input_variable_estimates.csv")
-
