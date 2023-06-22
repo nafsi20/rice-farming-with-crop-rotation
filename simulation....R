@@ -40,10 +40,6 @@ plot_distributions(mcSimulation_object = example_mc_simulation,
 read.csv("input_variable_estimates.csv")
 
 
-rice_income <- Paddy
-
-
-
 model_function <- function(){
 
   # Estimate the income of rice in a normal season
