@@ -4,7 +4,7 @@
 "3","Chili_yield",5,NA,10,"posnorm","(ton/ha)","Yield_in_a_chili_farm_under_normal_condition"
 "4","Market_price_(rice)",4000,NA,15000,"posnorm","(IDR/kg)","Price_of_paddy_in_a_normal_season"
 "5","Market_price_(soybean)",10000,NA,20000,"posnorm","(IDR/kg)","Price_of_soybean_in_a_normal_season"
-"6","Market_price_(chili)",20000,NA,2e+05,"posnorm","(IDR/kg)","Price_of_chili_in_a_normal_season"
+"6","Market_price_(chili)",20000,NA,200000,"posnorm","(IDR/kg)","Price_of_chili_in_a_normal_season"
 "7","Cost_of_labor",30000,NA,100000,"posnorm","(IDR/person/day)","Labor_costs_for_every_farm_under_normal_condition"
 "8","Cost_of_rice_seeds",1500,NA,9000,"posnorm","(IDR/kg)","Seed_costs_for_rice"
 "9","cost_of_soybean_seeds",5000,NA,10000,"posnorm","(IDR/kg)","Seed_costs_for_soybean"
