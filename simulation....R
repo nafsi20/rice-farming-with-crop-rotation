@@ -54,4 +54,4 @@ example_mc_simulation <- mcSimulation(estimate = as.estimate(input_variable_esti
 
 example_mc_simulation
 
-
+library(ggplot2)
