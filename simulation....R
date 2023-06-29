@@ -37,13 +37,16 @@ plot_distributions(mcSimulation_object = example_mc_simulation,
 
 
 
+library(decisionSupport)
+
 read.csv("input_variable_estimates.csv")
+
 
 
 model_function <- function(){
 
   # Estimate the income of rice in a normal season
-  rice_income <- Paddy_yield * Market_price_(rice)
+  rice_income <- Rice_yield * Market_price_(rice)
   
   # Estimate the income of soybean in a normal season
   soybean_income <- Soybean_yield * Market_price_(soybean)
@@ -84,5 +87,41 @@ example_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
                                       functionSyntax = "plainNames")
 
 example_mc_simulation
+
+
+
+
+
+read.csv("input_variable_estimates.csv")
+
+rice_income <- Paddy_yield * Market_price_(rice)
+
+
+model_function <- function(X, varnames){
+  
+  # Estimate the income of rice in a normal season
+  rice_income <- Paddy_yield * Market_price_(rice)
+  
+  #Estimate the cost of rice farm in a normal season
+  rice_cost <- sum(Cost_of_labor, Cost_of_rice_seeds, cost_of_pesticides,
+                   cost_of_fertilizer, cost_of_machinery, cost_of_harvesting)
+  
+  
+  # Estimate the final results from the model
+  final_result_rice <- rice_income - rice_cost
+  
+  # Generate the list of outputs from the Monte Carlo simulation
+  return(list(final_result = final_result_rice))
+}
+
+# Run the Monte Carlo simulation using the model function
+
+example_mc_simulation <- mcSimulation(estimate = as.estimate(input_variable_estimates),
+                                      model_function = model_function,
+                                      numberOfModelRuns = 500,
+                                      functionSyntax = "plainNames")
+
+example_mc_simulation
+
 
 
