@@ -81,6 +81,8 @@ model_function <- function(){
 
 # Run the Monte Carlo simulation using the model function
 
+input_estimates<-read.csv("input_variable_estimates.csv")
+
 example_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
                                       model_function = model_function,
                                       numberOfModelRuns = 1000,
