@@ -38,6 +38,14 @@ crop_rotation_decision <- function(){
   
   final_result_chili <- chili_income - chili_cost
   
+  
+  # Total benefits from crop production (agricultural development and riparian zone) ####
+  crop_rotation_all <-
+    intervention_fruit_benefits +
+    intervention_vegetable_benefits +
+    intervention_rainfed_crop_benefits
+  
+  
   # Generate the list of outputs from the Monte Carlo simulation
   return(list(final_result = final_result_rice + final_result_soybean + final_result_chili))
 }
@@ -53,7 +61,7 @@ crop_rotation_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimat
                                       numberOfModelRuns = 500,
                                       functionSyntax = "plainNames")
 
-
+input_estimates
 
 
 mcSimulation_results <- decisionSupport::mcSimulation(
