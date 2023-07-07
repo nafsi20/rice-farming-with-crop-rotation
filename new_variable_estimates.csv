@@ -29,4 +29,5 @@ Chili cultivation cost;Cost of mulch;chili_mulch_cost;posnorm;2500000;;3500000;I
 Chili cultivation cost;Cost of growth support (polybag, rope, stick, net);chili_growing_support_cost;posnorm;2000000;;3000000;IDR/ha
 Chili cultivation cost;Cost of fuel and electricity;chili_fuel_electricity_cost;posnorm;1000000;;3000000;IDR/ha
 Chili cultivation cost;Cost of harvesting for chili;chili_harvesting_cost;posnorm;100000;;200000;IDR/ha
-Discount rate;Discount rate;discount_rate;posnorm;1;;5;
+Discount rate;Discount rate;discount_rate;posnorm;0.01;;0.05;
+Year;Year of observation;n_year;const;10;;10;
