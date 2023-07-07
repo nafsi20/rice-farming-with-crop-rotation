@@ -79,7 +79,7 @@ decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simul
                                     vars = c("NPV_total_cost","NPV_rice_cost"),
                                     method = 'smooth_simple_overlay')
 
-# cashflow analysis
+# cashflow plot
 
 plot_cashflow(mcSimulation_object = crop_rotation_mc_simulation, cashflow_var_name = "crop_rotation_result")
 plot_cashflow(mcSimulation_object = crop_rotation_mc_simulation, cashflow_var_name = "rice_cultivation_result")
@@ -97,13 +97,3 @@ pls_result_rice <- plsr.mcSimulation(object = crop_rotation_mc_simulation,
 plot_pls(pls_result_rice, threshold = 0)
 
 
-
-
-make_variables <- function(est,n=1)
-{ x<-random(rho=est, n=n)
-for(i in colnames(x)) assign(i,
-                             as.numeric(x[1,i]),envir=.GlobalEnv)
-}
-
-
-make_variables(as.estimate(input_estimates))
