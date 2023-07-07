@@ -54,4 +54,51 @@ example_mc_simulation <- mcSimulation(estimate = as.estimate(input_variable_esti
 
 example_mc_simulation
 
-library(ggplot2)
+
+
+#plot
+
+plot_distributions(mcSimulation_object = example_mc_simulation,
+                   vars = "final_result",
+                   method = "boxplot_density",
+                   old_names = "final_result",
+                   new_names = "Outcome distribution for profits")
+make_variables <- function(est,n=1)
+{ x<-random(rho=est, n=n)
+for(i in colnames(x)) assign(i,
+                             as.numeric(x[1,i]),envir=.GlobalEnv)
+}
+
+make_variables(as.estimate(input_estimates))
+
+Market_price_rice
+Market_price_chili
+Market_price_soybean
+
+
+
+library(readr)
+
+example_input_table = "input_variable_estimates.csv"
+
+input_table <- read.csv("input_variable_estimates.csv")
+
+#call data File in your machine
+example_data <- read.csv("input_variable_estimates.csv")
+names(input_table)
+
+#lecture8.1
+install.packages("rstan")
+install.packages("StanHeaders")
+
+#seminar9
+install.packages("decisionsuppot")
+library(decisionSupport)
+
+        
+          
+              
+            
+
+             
+
