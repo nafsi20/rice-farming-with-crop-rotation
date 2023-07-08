@@ -98,6 +98,7 @@ evpi <- multi_EVPI(mc = mcSimulation_table, first_out_var = "NPV_crop_rotation")
 
 plot_evpi(evpi, decision_vars = "NPV_crop_rotation")
 plot_evpi(evpi, decision_vars = "NPV_rice")
+plot_evpi(evpi, decision_vars = "NPV_crop_rotation_income")
 
 
 
@@ -117,10 +118,19 @@ plot_pls(pls_result_rice, threshold = 0)
 
 
 # the plots
+
+#with crop rotation
 compound_figure(mcSimulation_object = crop_rotation_mc_simulation, 
                 input_table = input_estimates, plsrResults = pls_result_crop_rotation, 
                 EVPIresults = evpi, decision_var_name = "NPV_crop_rotation", 
                 cashflow_var_name = "crop_rotation_result", 
+                base_size = 7)
+
+#without crop rotation
+compound_figure(mcSimulation_object = crop_rotation_mc_simulation, 
+                input_table = input_estimates, plsrResults = pls_result_rice, 
+                EVPIresults = evpi, decision_var_name = "NPV_rice", 
+                cashflow_var_name = "rice_cultivation_result", 
                 base_size = 7)
 
 
