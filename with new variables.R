@@ -24,7 +24,7 @@ crop_rotation_decision <- function(){
   soybean_cost <- sum(soybean_land_rental_cost, soybean_seeds_cost, soybean_fertilizer_cost,
                       soybean_pesticide_cost, soybean_machinery_cost, soybean_harvesting_cost)
   
-  #Estimate the cost of chili farm in a normal season
+  #Estimate the cost in a normal season
   chili_cost <- sum(chili_land_rental_cost, chili_seeds_cost, chili_fertilizer_cost,
                     chili_pesticide_cost, chili_machinery_cost, chili_harvesting_cost)
   
@@ -70,7 +70,7 @@ decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simul
                                     method = 'smooth_simple_overlay')
 
 
-#just try, but we aren't using these
+#i just try, but we aren't using these
 decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
                                     vars = c("NPV_crop_rotation_income","NPV_rice_income"),
                                     method = 'smooth_simple_overlay')
