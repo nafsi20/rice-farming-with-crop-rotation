@@ -74,7 +74,7 @@ str(input_estimates)
 
 crop_rotation_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
                                             model_function = crop_rotation_decision,
-                                            numberOfModelRuns = 500,
+                                            numberOfModelRuns = 1000,
                                             functionSyntax = "plainNames")
 
 
@@ -113,12 +113,18 @@ decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simul
 # Vol analysis
 mcSimulation_table <- data.frame(crop_rotation_mc_simulation$x, crop_rotation_mc_simulation$y[1:4])
 
-evpi <- multi_EVPI(mc = mcSimulation_table, first_out_var = "NPV_rice")
-
-
+evpi_rice <- multi_EVPI(mc = mcSimulation_table, first_out_var = "NPV_rice")
 plot_evpi(evpi, decision_vars = "NPV_rice")
+
+
+evpi_crop_rotation_full <- multi_EVPI(mc = mcSimulation_table, first_out_var = "NPV_crop_rotation_full")
 plot_evpi(evpi, decision_vars = "NPV_crop_rotation_full")
+
+evpi_rice_soybean <- multi_EVPI(mc = mcSimulation_table, first_out_var = "NPV_rice_soybean")
 plot_evpi(evpi, decision_vars = "NPV_rice_soybean")
+
+
+evpi_rice_chili <- multi_EVPI(mc = mcSimulation_table, first_out_var = "NPV_rice_chili")
 plot_evpi(evpi, decision_vars = "NPV_rice_chili")
 
 
