@@ -176,14 +176,6 @@ plot_pls(pls_result, threshold = 0)
 
 # the plots
 
-#without crop rotation
-compound_figure(mcSimulation_object = crop_rotation_mc_simulation, 
-                input_table = input_estimates, plsrResults = pls_result_rice, 
-                EVPIresults = evpi, decision_var_name = "Rice_NPV", 
-                cashflow_var_name = "rice_cultivation_result", 
-                base_size = 7)
-
-
 #with crop rotation of 3 crops
 compound_figure(mcSimulation_object = crop_rotation_mc_simulation, 
                 input_table = input_estimates, plsrResults = pls_result_crop_rotation, 
