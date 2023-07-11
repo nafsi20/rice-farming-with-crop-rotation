@@ -42,7 +42,6 @@ crop_rotation_decision <- function(){
   
   # Final result
   #assuming rice cultivation is 3 times per year  
-<<<<<<< HEAD
   rice_cultivation_result = vv(rice_profit*3, n=n_year, var_CV=100)
   
   #crop rotation decision scenario
@@ -54,7 +53,6 @@ crop_rotation_decision <- function(){
   
   #if crop rotation of rice and chili is done in one year (rice-chili)
   rice_chili_result = vv(rice_profit + chili_profit, n=n_year, var_CV=100)
-=======
   rice_cultivation_result = rice_profit*3
   
   #crop rotation decision scenario
@@ -66,23 +64,18 @@ crop_rotation_decision <- function(){
   
   #if crop rotation of rice and chili is done in one year (rice-chili)
   rice_chili_result = rice_profit + chili_profit
->>>>>>> 14b4d62faaf9751e5d046b2cd3ec968c7e0fed45
-  
+
   
   # NPV
   NPV_rice <- discount(rice_cultivation_result, discount_rate, calculate_NPV = TRUE)
-<<<<<<< HEAD
   NPV_crop_rotation <- discount(crop_rotation_result, discount_rate, calculate_NPV = TRUE)
-=======
   NPV_crop_rotation_full <- discount(crop_rotation_full_result, discount_rate, calculate_NPV = TRUE)
->>>>>>> 14b4d62faaf9751e5d046b2cd3ec968c7e0fed45
   NPV_rice_soybean <- discount(rice_soybean_result, discount_rate, calculate_NPV = TRUE)
   NPV_rice_chili <- discount(rice_soybean_result, discount_rate, calculate_NPV = TRUE)
   
   
   # Generate the list of outputs from the Monte Carlo simulation
   return(list(Rice_NPV = NPV_rice,
-<<<<<<< HEAD
               crop_rotation_NPV = NPV_crop_rotation,
               rice_soybean_NPV = NPV_rice_soybean,
               rice_chili_NPV= NPV_rice_chili,
@@ -90,7 +83,6 @@ crop_rotation_decision <- function(){
               NPV_decision_rice_soybean = NPV_rice_soybean - NPV_rice,
               NPV_decision_rice_chili = NPV_rice_chili - NPV_rice,
               cashflow_crop_rotationn = crop_rotation_result - rice_cultivation_result,
-=======
               crop_rotation_full_NPV = NPV_crop_rotation_full,
               rice_soybean_NPV = NPV_rice_soybean,
               rice_chili_NPV= NPV_rice_chili,
@@ -98,7 +90,6 @@ crop_rotation_decision <- function(){
               NPV_decision_rice_soybean = NPV_rice_soybean - NPV_rice,
               NPV_decision_rice_chili = NPV_rice_chili - NPV_rice,
               cashflow_crop_rotationn = crop_rotation_full_result - rice_cultivation_result,
->>>>>>> 14b4d62faaf9751e5d046b2cd3ec968c7e0fed45
               cashflow_rice_soybean = rice_soybean_result - rice_cultivation_result,
               cashflow_rice_chili = rice_chili_result - rice_cultivation_result
   ))
@@ -124,8 +115,6 @@ crop_rotation_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimat
 
 # plot NPV distribution analysis
 
-<<<<<<< HEAD
-
 #if rice with soybean and chili (rice-soybean-chili)
 decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
                                     vars = c("crop_rotation_NPV", "Rice_NPV"),
@@ -143,8 +132,6 @@ decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simul
                                     method = 'smooth_simple_overlay')
 
 
-=======
->>>>>>> 14b4d62faaf9751e5d046b2cd3ec968c7e0fed45
 decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
                                     vars = "NPV_decision_crop_rotation",
                                     method = 'boxplot_density')
@@ -156,26 +143,6 @@ decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simul
 decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
                                     vars = "NPV_decision_rice_chili",
                                     method = 'boxplot_density')
-
-
-<<<<<<< HEAD
-=======
-#if rice with soybean and chili (rice-soybean-chili)
-decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
-                                    vars = c("crop_rotation_full_NPV", "Rice_NPV"),
-                                    method = 'smooth_simple_overlay')
-
-
-#if rice with soybean (rice-soybean-rice)
-decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
-                                    vars = c("NPV_decision_rice_soybean","Rice_NPV"),
-                                    method = 'smooth_simple_overlay')
-
-#if rice with chili (rice-chili)
-decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
-                                    vars = c("NPV_decision_rice_chili","Rice_NPV"),
-                                    method = 'smooth_simple_overlay')
->>>>>>> 14b4d62faaf9751e5d046b2cd3ec968c7e0fed45
 
 
 # cashflow analysis
@@ -194,11 +161,9 @@ plot_cashflow(mcSimulation_object = crop_rotation_mc_simulation, cashflow_var_na
 # Vol analysis
 mcSimulation_table <- data.frame(crop_rotation_mc_simulation$x, crop_rotation_mc_simulation$y[1:7])
 
-<<<<<<< HEAD
 evpi_crop_rotation <- multi_EVPI(mc = mcSimulation_table, first_out_var = "crop_rotation_NPV")
-=======
+
 evpi_crop_rotation <- multi_EVPI(mc = mcSimulation_table, first_out_var = "crop_rotation_full_NPV")
->>>>>>> 14b4d62faaf9751e5d046b2cd3ec968c7e0fed45
 plot_evpi(evpi_crop_rotation, decision_vars = "NPV_decision_crop_rotation")
 
 
@@ -216,30 +181,20 @@ plot_evpi(evpi_rice_chili, decision_vars = "NPV_decision_rice_chili")
 #with crop rotation of rice, soybean, and chili
 pls_result_crop_rotation <- plsr.mcSimulation(object = crop_rotation_mc_simulation,
                                               resultName = names(crop_rotation_mc_simulation$y)[5], ncomp = 1)
-<<<<<<< HEAD
 plot_pls(pls_result_crop_rotation, threshold = 0)
-=======
-plot_pls(pls_result_rice, threshold = 0)
->>>>>>> 14b4d62faaf9751e5d046b2cd3ec968c7e0fed45
+
+
 
 #with crop rotation of rice and soybean (rice-soybean-rice)
 pls_result_rice_soybean <- plsr.mcSimulation(object = crop_rotation_mc_simulation,
                                              resultName = names(crop_rotation_mc_simulation$y)[6], ncomp = 1)
-<<<<<<< HEAD
 plot_pls(pls_result_rice_soybean, threshold = 0)
-=======
-plot_pls(pls_result, threshold = 0)
->>>>>>> 14b4d62faaf9751e5d046b2cd3ec968c7e0fed45
 
 
 #with crop rotation of rice and chili (rice-chili)
 pls_result_rice_chili <- plsr.mcSimulation(object = crop_rotation_mc_simulation,
                                            resultName = names(crop_rotation_mc_simulation$y)[7], ncomp = 1)
-<<<<<<< HEAD
 plot_pls(pls_result_rice_chili, threshold = 0)
-=======
-plot_pls(pls_result, threshold = 0)
->>>>>>> 14b4d62faaf9751e5d046b2cd3ec968c7e0fed45
 
 
 # the plots
@@ -259,10 +214,6 @@ compound_figure(mcSimulation_object = crop_rotation_mc_simulation,
                 cashflow_var_name = "cashflow_rice_soybean", 
                 base_size = 7)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 14b4d62faaf9751e5d046b2cd3ec968c7e0fed45
 #with crop rotation of rice and chili (rice-chili)
 compound_figure(mcSimulation_object = crop_rotation_mc_simulation, 
                 input_table = input_estimates, plsrResults = pls_result_rice_chili, 
