@@ -91,12 +91,6 @@ decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simul
                                     vars = "NPV_decision_crop_rotation",
                                     method = 'boxplot')
 
-decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
-                                    vars = "NPV_decision_crop_rotation",
-                                    method = 'smooth_simple_overlay')
-
-
-
 
 # cashflow analysis
 
@@ -105,7 +99,7 @@ plot_cashflow(mcSimulation_object = crop_rotation_mc_simulation, cashflow_var_na
 
 
 
-# Vol analysis
+# VoI analysis
 mcSimulation_table <- data.frame(crop_rotation_mc_simulation$x, crop_rotation_mc_simulation$y[1:3])
 
 evpi_crop_rotation <- multi_EVPI(mc = mcSimulation_table, first_out_var = "crop_rotation_NPV")

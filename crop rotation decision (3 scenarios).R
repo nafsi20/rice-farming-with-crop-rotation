@@ -62,6 +62,12 @@ crop_rotation_decision <- function(){
   NPV_rice_chili <- discount(rice_chili_result, discount_rate, calculate_NPV = TRUE)
   
   
+  # Cashflow
+  cashflow_crop_rotation <- crop_rotation_result - rice_cultivation_result
+  cashflow_rice_soybean <- rice_soybean_result - rice_cultivation_result
+  cashflow_rice_chili <- rice_chili_result - rice_cultivation_result
+  
+  
   # Generate the list of outputs from the Monte Carlo simulation
   return(list(Rice_NPV = NPV_rice,
               crop_rotation_NPV = NPV_crop_rotation,
@@ -70,9 +76,9 @@ crop_rotation_decision <- function(){
               NPV_decision_crop_rotation = NPV_crop_rotation - NPV_rice,
               NPV_decision_rice_soybean = NPV_rice_soybean - NPV_rice,
               NPV_decision_rice_chili = NPV_rice_chili - NPV_rice,
-              cashflow_crop_rotation = crop_rotation_result - rice_cultivation_result,
-              cashflow_rice_soybean = rice_soybean_result - rice_cultivation_result,
-              cashflow_rice_chili = rice_chili_result - rice_cultivation_result
+              cashflow_crop_rotation = cashflow_crop_rotation,
+              cashflow_rice_soybean = cashflow_rice_soybean,
+              cashflow_rice_chili = cashflow_rice_chili
   ))
 }
 
@@ -140,7 +146,7 @@ plot_cashflow(mcSimulation_object = crop_rotation_mc_simulation, cashflow_var_na
 
 
 
-# Vol analysis
+# VoI analysis
 mcSimulation_table <- data.frame(crop_rotation_mc_simulation$x, crop_rotation_mc_simulation$y[1:7])
 
 evpi_crop_rotation <- multi_EVPI(mc = mcSimulation_table, first_out_var = "crop_rotation_NPV")
