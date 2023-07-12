@@ -1,0 +1,74 @@
+---
+title: "Rice farm with crop rotation"
+author: "Noviria Syifaun Nafsi, Sineenad Kongtonkun, Inkyin May, Vani Lian"
+date: "2023-07-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+Rice is the primary staple food crop with a steady increase in annual production, making Indonesia the third largest rice producer in the world. 93% of Indonesia’s total number of farmers are small family farms.
+
+# Motivation
+
+Crop rotation can increase crop yields and income than monoculture of rice and it can help disrupt the lifecycle of crop pests and reducing chemical use. Soybean can increase soil fertility and give extra income to farmers. Chili cultivation can improve farmers' income.
+
+
+
+# Overview of the project
+
+<center>
+```{r echo=FALSE}
+knitr::include_graphics('Photo rice farm with crop rotation/overview of the project.png')
+```
+</center)
+
+
+# Conception model 
+
+Rice farm with crop rotation. Crop rotation for this project is chilli ana soybean. Total cost per crop are consists of labor, seeds, pesticides, fertilizer, machinery and rent land. Moreover, Revenues is yield of rice, soybean and chilli. Finally, total cost, revenues and discount rate use put to calculate to Net Present Value(NVP).
+
+
+```{r echo=FALSE}
+knitr::include_graphics('Photo rice farm with crop rotation/conceptual model.png')
+```
+
+
+# Variable used in conceptual model
+
+# Variable used in conceptual and mathemetical formulation
+
+# Decision analysis
+
+# R code
+
+## Plot
+
+
+```{r}
+
+```
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Cashflow
+
+## Projection to laten structurees(PLS)
+
+## Value of information(Vol) anylasis
+
+# Result
+
+# Outcome
+
+# Recommendation
+
+# Conclusion
+
+
+
+
+
