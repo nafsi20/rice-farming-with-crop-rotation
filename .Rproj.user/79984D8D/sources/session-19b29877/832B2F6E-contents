@@ -1,0 +1,33 @@
+description;label;variable;distribution;lower;median;upper;unit
+Rice production;Rice yield;rice_yield;posnorm;3000;;6000;kg/ha
+Rice production;Rice price;rice_price;posnorm;4000;;7000;IDR/kg
+Rice cultivation cost;Rent land of rice;rice_land_rental_cost;posnorm;2000000;;4000000;IDR/ha
+Rice cultivation cost;Cost of rice seeds;rice_seeds_cost;posnorm;400000;;600000;IDR/ha
+Rice cultivation cost;Cost of fertilizer for rice;rice_fertilizer_cost;posnorm;1000000;;1500000;IDR/ha
+Rice cultivation cost;Cost of pesticide for rice;rice_pesticide_cost;posnorm;430000;;600000;IDR/ha
+Rice cultivation cost;Cost of labor for rice;rice_labor_cost;posnorm;5000000;;7000000;IDR/ha
+Rice cultivation cost;Cost of machinery for rice;rice_machinery_cost;posnorm;200000;;500000;IDR/ha
+Rice cultivation cost;Cost of harvesting for rice ;rice_harvesting_cost;posnorm;100000;;200000;IDR/ha
+Soybean production;Soybean yield;soybean_yield;posnorm;2000;;3000;kg/ha
+Soybean production;Soybean price;soybean_price;posnorm;5000;;10000;IDR/kg
+Soybean cultivation cost;Rent land of soybean;soybean_land_rental_cost;posnorm;1530000;;3000000;IDR/ha
+Soybean cultivation cost;Cost of seeds for soybean;soybean_seeds_cost;posnorm;500000;;650000;IDR/ha
+Soybean cultivation cost;Cost of fertilizer for soybean;soybean_fertilizer_cost;posnorm;3500000;;5500000;IDR/ha
+Soybean cultivation cost;Cost of pesticide for soybean;soybean_pesticide_cost;posnorm;300000;;450000;IDR/ha
+Soybean cultivation cost;Cost of labor for soybean;soybean_labor_cost;posnorm;3500000;;5500000;IDR/ha
+Soybean cultivation cost;Cost of machinery for soybean;soybean_machinery_cost;posnorm;100000;;200000;IDR/ha
+Soybean cultivation cost;Cost of harvesting for soybean;soybean_harvesting_cost;posnorm;50000;;100000;IDR/ha
+Chili production;Chili yield;chili_yield;posnorm;8000;;10000;kg/ha
+Chili production;Chili price;chili_price;posnorm;10000;;50000;IDR/kg
+Chili cultivation cost;Rent land of chili;chili_land_rental_cost;posnorm;3500000;;5500000;IDR/ha
+Chili cultivation cost;Cost of seeds for chili;chili_seeds_cost;posnorm;2000000;;3000000;IDR/ha
+Chili cultivation cost;Cost of fertilizer for chili;chili_fertilizer_cost;posnorm;7500000;;8500000;IDR/ha
+Chili cultivation cost;Cost of pesticide for chili;chili_pesticide_cost;posnorm;4500000;;6000000;IDR/ha
+Chili cultivation cost;Cost of labor for chili;chili_labor_cost;posnorm;30000000;;35000000;IDR/ha
+Chili cultivation cost;Cost of machinery for chili;chili_machinery_cost;posnorm;1000000;;2700000;IDR/ha
+Chili cultivation cost;Cost of mulch;chili_mulch_cost;posnorm;2500000;;3500000;IDR/ha
+Chili cultivation cost;Cost of growth support (polybag, rope, stick, net);chili_growing_support_cost;posnorm;2000000;;3000000;IDR/ha
+Chili cultivation cost;Cost of fuel and electricity;chili_fuel_electricity_cost;posnorm;1000000;;3000000;IDR/ha
+Chili cultivation cost;Cost of harvesting for chili;chili_harvesting_cost;posnorm;100000;;200000;IDR/ha
+Discount rate;Discount rate;discount_rate;posnorm;0.01;;0.05;
+Year;Year of observation;n_year;const;10;;10;

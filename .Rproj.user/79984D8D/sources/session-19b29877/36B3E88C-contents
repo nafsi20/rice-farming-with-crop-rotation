@@ -1,0 +1,11 @@
+description;variable;lower;upper;distribution
+;Rice yield (ton/ha);3;8;
+;Soybean yield (ton/ha);1;5;
+;Chili yield (ton/ha);5;10;
+;Cost of labor (IDR/ha);;;
+;Cost of rice seeds;;;
+;Cost of soybean seeds;;;
+;Cost of chili seeds;;;
+;Cost of pesticides;;;
+;Cost of machinery;;;
+;Cost of harvesting;;;
