@@ -91,12 +91,6 @@ decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simul
                                     vars = "NPV_decision_crop_rotation",
                                     method = 'boxplot')
 
-decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
-                                    vars = "NPV_decision_crop_rotation",
-                                    method = 'smooth_simple_overlay')
-
-
-
 
 # cashflow analysis
 

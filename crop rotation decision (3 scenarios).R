@@ -116,6 +116,7 @@ decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simul
 
 decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
                                     vars = "NPV_decision_crop_rotation",
+<<<<<<< HEAD
                                     method = 'boxplot')
 
 decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
@@ -125,6 +126,17 @@ decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simul
 decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
                                     vars = "NPV_decision_rice_chili",
                                     method = 'boxplot')
+=======
+                                    method = 'boxplot_density')
+
+decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
+                                    vars = "NPV_decision_rice_soybean",
+                                    method = 'boxplot_density')
+
+decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
+                                    vars = "NPV_decision_rice_chili",
+                                    method = 'boxplot_density')
+>>>>>>> 28268ee6789ae4a02ccb52f94bb03aafd4fde6ad
 
 
 # cashflow analysis
