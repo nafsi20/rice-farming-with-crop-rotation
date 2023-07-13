@@ -5,20 +5,22 @@ date: "2023-07-12"
 output: html_document
 bibliography: 
   - references.bib
+  - export.bib
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Introduction
+## Introduction
+### Overview
 
   Indonesia is the largest country in Southeast Asia.Rice is the primary staple food crop with a steady increase in annual production, making Indonesia the third largest rice producer in the world. 93% of Indonesia’s total number of farmers are small family farms. Rice is the main crop grown and staple food in Southeast Asia. 
-  Crop rotation is the practice of planting different crops sequentially ( @lubridate2011) on the same plot of land to improve soil health, optimize nutrients in the soil, and combat pest and weed pressure.
+  Crop rotation is the practice of planting different crops sequentially on the same plot of land to improve soil health, optimize nutrients in the soil, and combat pest and weed pressure.
     - Soybean (Glycine max) is a species of legume native to East Asia, widely grown for its edible bean which has numerous uses.
     - Chili (Capsicum annum L.)  is a plant of tropical and subtropical regions  for their fleshy fruits
 
-# Motivation
+### Motivation
 
 1. Rice is the primary staple food crop with a steady increase in annual production, making Indonesia the third largest rice producer in the world. 
 2. Crop rotation can increase crop yields and income than monoculture of rice and it can help disrupt the lifecycle of crop pests and reducing chemical use.
@@ -26,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE)
 4. Chili cultivation can improve farmers' income  because of good market price.
 
 
-# Overview of the project
+### Overview of the project
 
 <center>
 ```{r echo=FALSE}
@@ -35,7 +37,7 @@ knitr::include_graphics('Photo rice farm with crop rotation/overview of the proj
 </center>
 
 
-# Conception model 
+### Conception model 
 
 Rice farm with crop rotation. Crop rotation for this project is chilli ana soybean. Total cost per crop are consists of labor, seeds, pesticides, fertilizer, machinery and rent land. Moreover, Revenues is yield of rice, soybean and chilli. Finally, total cost, revenues and discount rate use put to calculate to Net Present Value(NVP).
 
@@ -54,14 +56,22 @@ read.csv("new_variable_estimates.csv",sep=";")
 ```{r echo=FALSE}
 knitr::include_graphics('Photo rice farm with crop rotation/Variable estimate.png')
 ```
-*explain meaning the order*^^^^
-
 </center>
+Variable for rice farm and crop rotation for small holder farmers in Indonesia have 8 mains variable and this consists of production, rice cultivation cost, soybean production, soybean cultivation cost, chilli production, chilli cultivation cost, discount rate and year of system. This project use 37 variable estimate to calculate
+
+
+
+## Estimate Calculation
+```{r echo=FALSE}
+knitr::include_graphics('Photo rice farm with crop rotation/Estimate calculation.png')
+```
+
 
 
 
 ## R code
 ### Decision analysis
+@Do2020
 
 ```{r include=FALSE}
 library(tidyverse)
@@ -360,7 +370,7 @@ It is highly recommended for Indonesian smallholder farmers to implement three c
 
 ```{r add_R_bib, include=FALSE}
 knitr::write_bib(c(.packages(),
-                   'knitr','decisionSupport'), 'references.bib')
+                   'knitr','decisionSupport'), 'export.bib')
 ```
 
 
