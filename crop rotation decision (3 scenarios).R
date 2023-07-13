@@ -205,3 +205,4 @@ compound_figure(mcSimulation_object = crop_rotation_mc_simulation,
                 EVPIresults = evpi_rice_chili, decision_var_name = "NPV_decision_rice_chili", 
                 cashflow_var_name = "cashflow_rice_chili", 
                 base_size = 7)
+
