@@ -1,8 +1,10 @@
 ---
-title: "Rice farm with crop rotation"
+title: "Rice Farming with Crop Rotation for Smallholder Farmers in Indonesia"
 author: "Noviria Syifaun Nafsi, Sineenad Kongtonkun, Inkyin May, Vani Lian"
 date: "2023-07-12"
 output: html_document
+bibliography: 
+  - reference.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -12,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # Introduction
 
   Indonesia is the largest country in Southeast Asia.Rice is the primary staple food crop with a steady increase in annual production, making Indonesia the third largest rice producer in the world. 93% of Indonesia’s total number of farmers are small family farms. Rice is the main crop grown and staple food in Southeast Asia. 
-  Crop rotation is the practice of planting different crops sequentially on the same plot of land to improve soil health, optimize nutrients in the soil, and combat pest and weed pressure.
+  Crop rotation is the practice of planting different crops sequentially ( @lubridate2011) on the same plot of land to improve soil health, optimize nutrients in the soil, and combat pest and weed pressure.
     - Soybean (Glycine max) is a species of legume native to East Asia, widely grown for its edible bean which has numerous uses.
     - Chili (Capsicum annum L.)  is a plant of tropical and subtropical regions  for their fleshy fruits
 
@@ -52,6 +54,7 @@ read.csv("new_variable_estimates.csv",sep=";")
 ```{r echo=FALSE}
 knitr::include_graphics('Photo rice farm with crop rotation/Variable estimate.png')
 ```
+*explain meaning the order*^^^^
 
 </center>
 
@@ -258,12 +261,18 @@ pls_result_rice_soybean <- plsr.mcSimulation(object = crop_rotation_mc_simulatio
 plot_pls(pls_result_rice_soybean, threshold = 0)
 ```
 
+####with crop rotation of rice and chili (rice-chili)
+```{r}
+pls_result_rice_chili <- plsr.mcSimulation(object = crop_rotation_mc_simulation,
+                                           resultName = names(crop_rotation_mc_simulation$y)[7], ncomp = 1)
+plot_pls(pls_result_rice_chili, threshold = 0)
+```
 
 ## the plots
 
 
 
-###vwith crop rotation of 3 crops##
+### with crop rotation of 3 crops
 ```{r}
 compound_figure(mcSimulation_object = crop_rotation_mc_simulation, 
                 input_table = input_estimates, plsrResults = pls_result_crop_rotation, 
@@ -285,7 +294,13 @@ compound_figure(mcSimulation_object = crop_rotation_mc_simulation,
 
 
 ### with crop rotation of rice and chili (rice-chili) ##
-
+```{r}
+compound_figure(mcSimulation_object = crop_rotation_mc_simulation, 
+                input_table = input_estimates, plsrResults = pls_result_rice_chili, 
+                EVPIresults = evpi_rice_chili, decision_var_name = "NPV_decision_rice_chili", 
+                cashflow_var_name = "cashflow_rice_chili", 
+                base_size = 7)
+```
 
 
 ## Conclusion
@@ -303,7 +318,11 @@ It is highly recommended for Indonesian smallholder farmers to implement three c
 
  Crop rotation is crucial for maintaining the soil's physical, chemical, and biological properties, as well as for improving crop yields and farmers' income. 
  
-##Reference
+## Reference
 
+```{r add_R_bib, include=FALSE}
+knitr::write_bib(c(.packages(),
+                   'knitr','decisionSupport'), 'References/reference.bib')
+```
 
 
