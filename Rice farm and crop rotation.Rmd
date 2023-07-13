@@ -264,7 +264,6 @@ plot_pls(pls_result_rice_soybean, threshold = 0)
 
 
 ###vwith crop rotation of 3 crops##
-
 ```{r}
 compound_figure(mcSimulation_object = crop_rotation_mc_simulation, 
                 input_table = input_estimates, plsrResults = pls_result_crop_rotation, 
@@ -272,6 +271,7 @@ compound_figure(mcSimulation_object = crop_rotation_mc_simulation,
                 cashflow_var_name = "cashflow_crop_rotation", 
                 base_size = 7)
 ```
+
 
 
 ### with crop rotation of rice and soybean (rice-soybean-rice)
@@ -285,13 +285,7 @@ compound_figure(mcSimulation_object = crop_rotation_mc_simulation,
 
 
 ### with crop rotation of rice and chili (rice-chili) ##
-```{r}
-compound_figure(mcSimulation_object = crop_rotation_mc_simulation, 
-                input_table = input_estimates, plsrResults = pls_result_rice_chili, 
-                EVPIresults = evpi_rice_chili, decision_var_name = "NPV_decision_rice_chili", 
-                cashflow_var_name = "cashflow_rice_chili", 
-                base_size = 7)
-```
+
 
 
 ## Conclusion
