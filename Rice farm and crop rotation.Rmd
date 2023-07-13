@@ -11,7 +11,6 @@ bibliography:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
 ## Introduction
 ### Overview
 
@@ -301,8 +300,6 @@ crop_rotation_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimat
 ### Plot NPV distribution analysis
 
 #### NPV for crop-rotation
-<center>
-```{r}
 
 #if rice with soybean and chili (rice-soybean-chili)
 decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
@@ -312,12 +309,10 @@ decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simul
                                     vars = "NPV_decision_crop_rotation",
                                     method = 'boxplot')
 ```
-</center>
+
 
 
 #### NPV for rice-soybean-rice
-<center>
-```{r}
 #if rice with soybean (rice-soybean-rice)
 decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
                                     vars = c("NPV_decision_rice_soybean","Rice_NPV"),
@@ -326,12 +321,9 @@ decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simul
                                     vars = "NPV_decision_rice_chili",
                                     method = 'boxplot')
 ```
-</center>
 
 
 #### NPV for rice-chilli
-<center>
-```{r}
 #if rice with chili (rice-chili)
 decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
                                     vars = c("NPV_decision_rice_chili","Rice_NPV"),
@@ -339,10 +331,7 @@ decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simul
 decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
                                     vars = "NPV_decision_rice_chili",
                                     method = 'boxplot')
-
 ```
-</center>
-
 
 ### Cashflow analysis
 
