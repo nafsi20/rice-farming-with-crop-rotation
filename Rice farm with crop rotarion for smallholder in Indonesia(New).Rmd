@@ -366,12 +366,12 @@ compound_figure(mcSimulation_object = crop_rotation_mc_simulation,
 
 ## Recommendtion
 
-It is highly recommended for Indonesian smallholder farmers to implement three crop rotations (rice, soybean, and chili) as it is more suitable for sustainable development.
+  We recommend Indonesian smallholder farmers to implement crop rotation either for three crops (rice, soybean, and chili) or two crops (rice and chili) as it seems more profitable than growing rice only all year around. However, we would not recommend to implement crop rotation between rice and soybean as it seems not so profitable.
 
 ## What have we learned from this project?
 
-  Rice farming with crop roration can be implemented by Indonesian smallholder farmers. However, not all the crops are profitable to be rotated with rice.
-  Crop rotation is crucial for maintaining the soil's physical, chemical, and biological properties, as well as for improving crop yields and farmers' income. 
+  
+  Rice farming with crop rotation of soybean and chili can be implemented by Indonesian smallholder farmers to get higher income. However, not all the crops are profitable to be rotated with rice. There are more uncertainties in crop rotation of rice and soybean compared to other scenarios. Thus, further data and research still needed.
  
 ## Reference
 
