@@ -107,11 +107,31 @@ decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simul
                                     vars = c("crop_rotation_NPV", "Rice_NPV"),
                                     method = 'smooth_simple_overlay')
 
+decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
+                                    vars = c("crop_rotation_NPV", "Rice_NPV"),
+                                    method = 'boxplot')
+
+decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
+                                    vars = c("NPV_decision_crop_rotation"),
+                                    method = 'boxplot_density')
+
+
+
 
 #if rice with soybean (rice-soybean-rice)
 decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
                                     vars = c("rice_soybean_NPV","Rice_NPV"),
                                     method = 'smooth_simple_overlay')
+
+decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
+                                    vars = c("rice_soybean_NPV","Rice_NPV"),
+                                    method = 'boxplot')
+
+decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
+                                    vars = c("NPV_decision_rice_soybean"),
+                                    method = 'boxplot_density')
+
+
 
 
 #if rice with chili (rice-chili)
@@ -119,27 +139,13 @@ decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simul
                                     vars = c("rice_chili_NPV","Rice_NPV"),
                                     method = 'smooth_simple_overlay')
 
-
 decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
-                                    vars = c("crop_rotation_NPV", "Rice_NPV"),
+                                    vars = c("rice_chili_NPV","Rice_NPV"),
                                     method = 'boxplot')
 
 decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
-                                    vars = c("rice_soybean_NPV", "Rice_NPV"),
-                                    method = 'boxplot')
-
-decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
-                                    vars = c("rice_chili_NPV", "Rice_NPV"),
-                                    method = 'boxplot')
-
-
-decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
-                                    vars = c("NPV_decision_crop_rotation"),
+                                    vars = c("NPV_decision_rice_chili"),
                                     method = 'boxplot_density')
-
-decisionSupport::plot_distributions(mcSimulation_object = crop_rotation_mc_simulation, 
-                                    vars = c("NPV_decision_crop_rotation"),
-                                    method = 'smooth_simple_overlay')
 
 
 
@@ -216,3 +222,4 @@ compound_figure(mcSimulation_object = crop_rotation_mc_simulation,
                 EVPIresults = evpi_rice_chili, decision_var_name = "NPV_decision_rice_chili", 
                 cashflow_var_name = "cashflow_rice_chili", 
                 base_size = 7)
+
