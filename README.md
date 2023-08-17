@@ -1,10 +1,20 @@
+<<<<<<< HEAD
+=======
+# Rice Farming with Crop Rotation for Smallholder Farmers in Indonesia
+
+>>>>>>> d4622815bfc9a6b3077bc51f71174fc2449b0918
 ---
 title: "Rice Farming with Crop Rotation for Smallholder Farmers in Indonesia"
 author: "Noviria Syifaun Nafsi, Sineenad Kongtonkun, Inkyin May, Vani Lian"
 date: "2023-07-12"
 output:
+<<<<<<< HEAD
   html_document: default
   pdf_document: default
+=======
+  pdf_document: default
+  html_document: default
+>>>>>>> d4622815bfc9a6b3077bc51f71174fc2449b0918
 bibliography:
 - references.bib
 - export.bib
