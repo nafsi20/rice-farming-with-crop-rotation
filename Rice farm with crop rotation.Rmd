@@ -4,8 +4,8 @@ author: "Noviria Syifaun Nafsi, Sineenad Kongtonkun, Inkyin May, Vani Lian"
 date: "2023-07-13"
 output:
   word_document: default
-  html_document: default
   pdf_document: default
+  html_document: default
 bibliography:
 - references.bib
 - export.bib
@@ -18,17 +18,23 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Introduction
 ### Overview
 
-  Indonesia is the largest country in Southeast Asia. Rice is the primary staple food crop with a steady increase in annual production, making Indonesia the third largest rice producer in the world. 93% of Indonesia’s total number of farmers are small family farms. Rice is the main crop grown and staple food in Southeast Asia.(@Yoshida1981)
-  Crop rotation is the practice of planting different crops sequentially on the same plot of land to improve soil health, optimize nutrients in the soil, and combat pest and weed pressure.(@Crystal2004)
-  Soybean is a species of legume native to East Asia, widely grown for its edible bean which has numerous uses.(@Wright2005)
-  Chili is a plant of tropical and subtropical regions  for their fleshy fruits.(@MOALF2016)
+  Rice is known as one of the main crops and a staple food in Southeast Asia (@Yoshida1981). Indonesia is one of the largest countries in Southeast Asia, and rice is one of their main staple crops. With an increase in production every year, Indonesia has become the third-largest rice producer in the world, with around 93% of Indonesian farmers possessing small family farms (@Fao2018).
+  
+  Crop rotation is a method of cultivating different crops sequentially on the same field that has the benefit of increasing soil fertility, enhancing nutrients in the soil, and reducing pest and weed pressure (@Crystal2004). Crop rotation can be implemented by growing several valuable crops, such as rice, soybeans, and chili, and these three crops are commonly grown in Indonesia.
+  
+  Soybean is one of the legume species that originated in East Asia, and it is widely cultivated to be consumed as beans and for numerous other uses (@Wright2005). In Indonesia, soybean is known as the third-most important food crop after rice and maize, and the consumption of soybean tends to rise year after year (@Harsono2021).
+Chili is a tropical and subtropical regional crop for fleshy fruits (@MOALF2016), and it is also one of the commodities that is known to have an economic value that is relatively high in Indonesia (@Sundari2021).
+
+  Implementing rice farming with crop rotation could potentially be advantageous for smallholder farmers in Indonesia, as it holds the promise of increased profitability through diversified income from different crops. Therefore, this project is undertaken to determine the profitability of implementing the decision of rice farming with crop rotation for smallholders in Indonesia.
   
 ### Motivation
 
-1. Rice is the primary staple food crop with a steady increase in annual production, making Indonesia the third largest rice producer in the world. 
-2. Crop rotation can increase crop yields and income than monoculture of rice and it can help disrupt the lifecycle of crop pests and reducing chemical use.
-3. Soybean can increase soil fertility and give extra income to farmers.
-4. Chili cultivation can improve farmers' income  because of good market price.
+Our motivation to conduct the decision analysis of Rice farming with crop rotation in Indonesia is outlined as follows:
+
+1.	Rice stands as the primary staple food in Indonesia and a majority of smallholder farmers cultivate it.
+2.	The implementation of crop rotation offers several advantages, including: increasing crop yield, improving soil fertility, and reducing infestation of pests and diseases in the field. Thus, it is likely to bring benefits to smallholder farmers. In addition, the farmers can generate income from a diverse range of crops they cultivated within a year, which could potentially result in greater profitability for smallholder farmers.
+3.	Soybean is one of the valuable crops that is commonly grown by Indonesian farmers. Beyond its economic value, soybean as a legume functioning as a nitrogen-fixing crop, has the potential to enhance field sustainability.
+4.	Chilli as one of the most highly prized horticultural crops commonly cultivated in Indonesia, potentially gives an opportunity for the smallholder farmers to gain more significant income.
 
 
 ### Overview of the project
@@ -42,10 +48,10 @@ knitr::include_graphics('Photo rice farm with crop rotation/overview of the proj
 
 ### Conceptual model 
 
-This project will analyse the decision of crop rotation (soybean and chili) with rice farming.
-Total cost is calculated for each crop, which consists of labor, seeds, pesticides, fertilizer, machinery and rent land. 
-The revenues is calculated for each crop production by multiplying the yield of each crop by the selling price of each crop per ha. 
-The total cost, revenues and discount rate are used as variable estimates in order to calculate the Net Present Value (NVP).
+This project analyzes the decision of crop rotation (soybean and chili) with rice farming.
+The total cost is calculated for each crop, which consists of labor, seeds, pesticides, fertilizer, machinery, and renting land.
+The revenues are calculated for each crop production by multiplying the yield of each crop by the selling price of each crop per ha. 
+The total cost, revenues, and discount rate are used as variable estimates in order to calculate the Net Present Value (NVP).
 
 ```{r echo=FALSE}
 knitr::include_graphics('Photo rice farm with crop rotation/conceptual model.png')
@@ -63,7 +69,7 @@ read.csv("new_variable_estimates.csv",sep=";")
 knitr::include_graphics('Photo rice farm with crop rotation/Variable estimate.png')
 ```
 </center>
-Variable for rice farm and crop rotation for small holder farmers in Indonesia have 8 mains variables that are consist of rice production, rice cultivation cost, soybean production, soybean cultivation cost, chili production, chili cultivation cost, discount rate and year of system. Overall, there are 33 variables that are used for this decision analysis.
+There are eight main variables that are used to analyze the decision of rice farming and crop rotation for smallholder farmers in Indonesia: rice production, rice cultivation cost, soybean production, soybean cultivation cost, chili production, chili cultivation cost, discount rate, and year of system. Overall, there are 33 variables that are used for this decision analysis.
 
 **Source** :
 
@@ -73,18 +79,19 @@ Variable for rice farm and crop rotation for small holder farmers in Indonesia h
 ```{r echo=FALSE}
 knitr::include_graphics('Photo rice farm with crop rotation/Estimate calculation.png')
 ```
-**NPV (Net Present Value)**: In financial terms, the NPV the measurement of the profitability of a project or programme. This is achieved by subtracting the current values of expenditure from the current values of income over a period of time. Income can be referred to as benefit and expenditure can be referred to as cost.
 
-**Discount Rate**: The discount rate is the interest rate used in analysis of discounted cash flow (DCF).
+In this analysis, the Net Present Value (NPV) is calculated by dividing the difference total income and total outcome from the cultivation in the year of system by the value of 1 minus the ‘discount rate’ (r) to the power of ‘number of years in the system’ (n).
 
-@Stantec2005
+**NPV (Net Present Value)**: In financial terms, NPV is the measurement of the profitability of a project or program. This is achieved by subtracting the current values of expenditure from the current values of income over a period of time. Income can be referred to as a benefit, and expenditure can be referred to as a cost.
+
+**Discount Rate**: The discount rate is the interest rate used in analysis of discounted cash flow (DCF) (@Stantec2005).
 
 
 
 ## Decision analysis
 ### R code
 
-@Do2020
+Cory Whitney, Eike Luedeling et al.
 
 ```{r include=FALSE}
 library(tidyverse)
@@ -373,11 +380,11 @@ compound_figure(mcSimulation_object = crop_rotation_mc_simulation,
 
 ## Conclusion
 
-1. This project has proven that selecting the appropriate crop rotation between rice, soybean, and chili seem profitable for achieving optimal results with respect to higher income for rice farming.
-2. The decision to rotate crops between rice and chili is still applicable with slightly smaller profits.
-3. Crop rotation between rice, soybean, and rice is less efficient than other options with respect to sustainable income.
+1. This project has proven that selecting the appropriate crop rotation between rice, soybean, and chili seems profitable for achieving optimal results with respect to higher income for rice farming.
+2. The decision to rotate crops between rice and chili is still applicable, with slightly smaller profits.
+3. Crop rotation between rice and soybean is less efficient than other options with respect to sustainable income.
 
-## Recommendtion
+## Recommendation
 
 1.We **recommend** Indonesian smallholder farmers to implement crop rotation either for three crops **(rice, soybean, and chili)** or two crops **(rice and chili)** as it seems more profitable than growing rice only all year around.
 
@@ -385,9 +392,9 @@ compound_figure(mcSimulation_object = crop_rotation_mc_simulation,
 
 ## What we have learned from this project?
 
-1. Rice farming with crop rotation of soybean and chili can be implemented by Indonesian smallholder farmers to get higher income.
-2. However, not every crops are profitable to be rotated with rice.
-3. There are more uncertainties in crop rotation of rice and soybean compared to other scenarios. Thus, further data and research still needed.
+1. Rice farming with crop rotation of soybean and chili can be implemented by Indonesian smallholder farmers to get a higher income.
+2. However, not every crop is profitable to rotate with rice.
+3. There are more uncertainties in the crop rotation of rice and soybeans compared to other scenarios. Thus, further data and research are still needed.
 
 
 ## Reference
